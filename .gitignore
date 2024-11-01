@@ -1,0 +1,6 @@
+# Virtual environment directories
+venv/
+.env
+
+# Local settings
+portfolio/settings/local.py
