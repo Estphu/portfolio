@@ -7,3 +7,14 @@ portfolio/settings/local.py
 
 # Ignore dynaconf secret files
 .secrets.*
+
+# Django
+/static/
+/media/
+db.sqlite3
+*.log
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
