@@ -4,3 +4,6 @@ venv/
 
 # Local settings
 portfolio/settings/local.py
+
+# Ignore dynaconf secret files
+.secrets.*
