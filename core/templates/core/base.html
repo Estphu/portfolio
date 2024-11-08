@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %} | Jawad</title>
+    <title>{% block title %}{% endblock %} | Jawad</title>
+    <!-- Tailwind CSS -->
     <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </head>
-<body>
-    <h1>Jawad</h1>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto">
+            <a href="/" class="text-lg font-semibold">My Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-center p-4">
+        &copy; {{ year }} My Portfolio. All rights reserved.
+    </footer>
 </body>
 </html>
