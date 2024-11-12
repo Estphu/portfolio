@@ -7,28 +7,21 @@
         <meta name="keywords" content="Django, Python, Developer, Portfolio, Resume">
         <title>{% block title %}{% endblock title %} | Jawad</title>
     <!-- Tailwind CSS -->
-        <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+        <link href="{% static 'src/output.css' %}" rel="stylesheet">
     <!-- HTMX -->
         <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <!-- Alpine.js -->
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
     </head>
-    <body class="bg-gray-100 text-gray-800">
+    <body>
 
-        <nav class="bg-blue-600 p-4 text-white">
-            <div class="container text-center mx-auto">
-                <a href="{% url 'home' %}" class="text-lg font-semibold">ESTPHU</a>
-            </div>
-        </nav>
+        {% include "core/components/navbar.html" %}
 
     <!-- Main Content -->
-        <main class="container mx-auto my-8">
+        <main class="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-8">
             {% block content %}{% endblock content %}
         </main>
 
     <!-- Footer -->
-        <footer class="bg-gray-200 text-center p-4">
-            © {{ year }} Estphu. All rights reserved.
-        </footer>
     </body>
 </html>
