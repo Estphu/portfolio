@@ -1,11 +1,11 @@
 {% load static %}
 
-<nav x-data="{ isOpen: false }" class="bg-white shadow dark:bg-gray-800">
+<nav x-data="{ isOpen: false }" class="fixed top-0 left-0 w-full bg-white shadow dark:bg-black">
     <div class="container px-6 py-4 mx-auto">
         <div class="lg:flex lg:items-center">
             <div class="flex items-center justify-between">
                 <a href="#">
-                    <img class="w-full h-6 sm:h-7" src="{% get_media_prefix %}logo/estphu.svg" alt="" height="100" width="200">
+                    <img src="{% get_media_prefix %}logo/estphu.png" alt="jawad-logo" height="31" width="50" class="cursor-pointer">
                 </a>
 
                 <!-- Mobile menu button -->
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+            <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-black lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
                 <div class="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
                     <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">features</a>
                     <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">downloads</a>
@@ -37,11 +37,11 @@
                             </svg>
                         </span>
 
-                        <input type="text" class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600" placeholder="Search">
+                        <input type="text" class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-black dark:text-gray-300 focus:outline-none focus:border-gray-600" placeholder="Search">
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
+                <div class="flex justify-center mt-6 lg:flex lg:items-center lg:mt-0 lg:-mx-2">
                     <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -65,6 +65,13 @@
                             </path>
                         </svg>
                     </a>
+                    <div
+                        class="profile-avatar-container flex items-center justify-center w-8 h-8 mx-4 overflow-hidden rounded-full"
+                        hx-get="{% url 'show_avatar' %}"
+                        hx-target="body"
+                        hx-swap="beforeend">
+                        <img src="{% get_media_prefix %}avatar/jawad.jpg" alt="Myself" class="cursor-pointer" height="35" width="32">
+                    </div>
                 </div>
             </div>
         </div>
