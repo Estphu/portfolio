@@ -21,7 +21,7 @@ node_modules/
 
 # Secrets/Local Configs
 .env
-.secrets
+.secrets.yaml
 settings/local_settings.py
 
 # IDEs/Editors
