@@ -1,20 +1,49 @@
-# Virtual environment directories
+# Python-related
+__pycache__/
+*.py[cod]
+*$py.class
 venv/
-.env
-
-# Local settings
-portfolio/settings/local.py
-
-# Ignore dynaconf secret files
-.secrets.*
+env/
 
 # Django
-/static/
-/media/
 db.sqlite3
+media/
+static/
+staticfiles/
 *.log
+*/migrations/*.py
+!*/migrations/__init__.py
 
-# Node.js
+# Node.js/Tailwind
 node_modules/
-npm-debug.log
-yarn-error.log
+*.css.map
+*.min.css
+
+# Secrets/Local Configs
+.env
+.secrets
+settings/local_settings.py
+
+# IDEs/Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build/Dependencies
+build/
+dist/
+package-lock.json
+yarn.lock
+
+# Git and Pre-commit Hooks
+.git/
+.pre-commit-config.yaml
+.pre-commit/
+
+# Project-specific
+.mypy_cache/

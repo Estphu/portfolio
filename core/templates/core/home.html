@@ -1,10 +1,13 @@
-{% extends "core/base.html" %}
+{% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}
+  Home
+{% endblock %}
 
 {% block content %}
-    <div x-data="{ showInfo: false }" class="text-center bg-white/30 backdrop-blur-md rounded-xl border border-white/20 shadow-lg p-6 max-w-sm">
-        <h1 class="text-3xl font-bold mb-4">Hey there,</h1>
-        <p class="mb-6">This is the home page of my Django portfolio project.</p>
-    </div>
-{% endblock content %}
+  <div class="flex flex-col items-center">
+    <h1 class="relative w-[max-content] font-mono before:absolute before:inset-0 before:animate-typewriter before:bg-white after:absolute after:inset-0 after:w-[0.125em]">Can't welcome, we're under construction!</h1>
+    <img class="cursor-pointer mt-3" src="{% get_media_prefix %}sign-board/under-construction.svg" alt="under-construction" width="50">
+  </div>
+{% endblock %}

@@ -19,6 +19,7 @@ docutils==0.21.2
 exceptiongroup==1.2.2
 fastapi==0.115.4
 filelock==3.16.1
+fontawesomefree=6.6.0
 frozenlist==1.5.0
 gunicorn==23.0.0
 h11==0.14.0

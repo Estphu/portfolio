@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # third-party
     "compressor",
     "django_browser_reload",
+    "fontawesomefree",
     # django
     "django.contrib.admin",
     "django.contrib.auth",
@@ -105,11 +106,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_ROOT = PROJECT_DIR / "staticfiles"
+STATIC_ROOT = PROJECT_DIR / "static"
 
 STATIC_URL = "static/"
-
-STATICFILES_DIRS = [PROJECT_DIR / "static"]
 
 MEDIA_URL = "media/"
 
