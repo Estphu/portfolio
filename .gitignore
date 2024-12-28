@@ -1,38 +1,34 @@
-# Python-related
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-venv/
-env/
 
 # Django
-db.sqlite3
-media/
-static/
-staticfiles/
 *.log
-*/migrations/*.py
-!*/migrations/__init__.py
+*.pot
+*.pyc
+db.sqlite3
+media
+static
+staticfiles
 
 # Node.js/Tailwind
-node_modules/
+node_modules
 *.css.map
 *.min.css
 
 # Secrets/Local Configs
+venv/
 .env
 .secrets.yaml
-settings/local_settings.py
 
-# IDEs/Editors
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
-*.swp
-*.swo
-*~
-.DS_Store
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
 
 # Build/Dependencies
 build/
@@ -40,10 +36,8 @@ dist/
 package-lock.json
 yarn.lock
 
-# Git and Pre-commit Hooks
+# Git
 .git/
-.pre-commit-config.yaml
-.pre-commit/
 
 # Project-specific
 .mypy_cache/
